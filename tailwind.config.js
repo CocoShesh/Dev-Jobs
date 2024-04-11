@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "dektop-header": "url('./assets/desktop/bg-pattern-header.svg')",
-        "mobile-header": "url('./assets/mobile/bg-pattern-header.svg')",
+        "dektop-header": "url('/assets/desktop/bg-pattern-header.svg')",
+        "mobile-header": "url('/assets/mobile/bg-pattern-header.svg')",
       },
     },
   },
