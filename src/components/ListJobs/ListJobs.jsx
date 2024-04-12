@@ -28,7 +28,7 @@ const ListJobs = () => {
       )}
       {!isLoading && filterJobs.length === 0 && <NoResults />}
       {!isLoading && filterJobs.length > 0 && (
-        <main className="h-full w-full flex flex-col items-center justify-center pb-20 mt-24 max-md:mt-20">
+        <main className="h-full w-full flex flex-col items-center justify-center z-10 pb-20 mt-24 max-md:mt-20">
           <section
             data-aos="zoom-in-left"
             data-aos-offset="300"
