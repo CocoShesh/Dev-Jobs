@@ -39,7 +39,7 @@ const JobDetails = () => {
         </section>
       </section>
       <section className="min-h-screen   w-full  flex flex-col items-center  justify-between pt-32 max-md:pt-[13rem]  max-lg:px-3 ">
-        <section className="h-fit bg-white dark:bg-[#19202d] dark:text-white lg:w-[60%] max-lg:w-full  rounded-lg p-8">
+        <section className="h-fit bg-white dark:bg-[#19202d] dark:text-white lg:w-[60%] max-lg:w-full  rounded-lg p-8 ">
           <section className="text-[#939ba4] flex items-center gap-2">
             <span> {job.postedAt} </span>
             <span className="text-2xl"> • </span>

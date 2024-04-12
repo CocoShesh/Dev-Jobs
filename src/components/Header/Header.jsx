@@ -6,8 +6,8 @@ const Header = () => {
     setToggle(document.documentElement.classList.toggle("dark"));
   };
   return (
-    <header className="bg-dektop-header w-full bg-cover -14 h-[170px]  2xl:h-[220px] flex flex-col items-center justify-center bg-no-repeat max-md:bg-mobile-header">
-      <section className="w-[75%] flex justify-between items-center max-md:w-full max-md:px-5">
+    <header className="bg-dektop-header w-full bg-cover  h-[170px]  2xl:h-[220px] flex flex-col items-center justify-center bg-no-repeat max-md:bg-mobile-header">
+      <section className="w-[75%] flex justify-between items-center max-md:w-full max-md:px-5 2xl:pb-5">
         <Link to="/">
           <img src="/assets/desktop/logo.svg" alt="" />
         </Link>

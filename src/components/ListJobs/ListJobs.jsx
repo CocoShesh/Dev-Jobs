@@ -23,7 +23,7 @@ const ListJobs = () => {
       )}
       {!isLoading && filterJobs.length === 0 && <NoResults />}
       {!isLoading && filterJobs.length > 0 && (
-        <main className="h-full w-full flex flex-col items-center justify-center pb-20 mt-32">
+        <main className="h-full w-full flex flex-col items-center justify-center pb-20 mt-24 max-md:mt-20">
           <section className="lg:w-[85%] grid lg:grid-cols-3 gap-x-8 gap-y-14 sm:grid-cols-2  pb-10 h-fit max-lg:w-[95%] ">
             {filterJobs.slice(0, loadMore ? 15 : 12).map(job => {
               return (
