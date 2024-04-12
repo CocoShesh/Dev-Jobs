@@ -91,13 +91,13 @@ const JobDetails = () => {
         </section>
         <section className="h-[100px] bg-white w-full  dark:bg-[#19202d] dark:text-white mt-20 flex items-center justify-center ">
           <section className=" lg:w-[60%] max-lg:w-full max-lg:px-5 flex items-center justify-between">
-            <section>
+            <section className="max-md:hidden">
               <h1 className="font-bold text-[#1c2230]  dark:text-white text-xl mb-1">
                 {job?.position}
               </h1>
               <span>{job?.company}</span>
             </section>
-            <button className="w-fit bg-[#5864e0] px-5 py-3 rounded-md text-white">
+            <button className="w-fit max-md:w-full bg-[#5864e0] px-5 py-3 rounded-md text-white">
               Apply Now
             </button>
           </section>
