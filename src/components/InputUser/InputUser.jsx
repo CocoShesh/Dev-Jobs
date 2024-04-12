@@ -106,7 +106,7 @@ const InputUser = () => {
             />
           </section>
           {toggleFilter && (
-            <section className="h-fit pb-5 w-full  px-5  top-full shadow-lg border-t border-zinc-500 z-10  bg-white  dark:bg-[#19202d] absolute">
+            <section className="h-fit pb-5 w-full  px-5  top-[120px] shadow-lg border-t border-zinc-500 z-10  bg-white  dark:bg-[#19202d] absolute">
               <section className="relative ">
                 <input
                   type="text"
