@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { listJobs } from "../context/ListJobsContext";
-import Header from "../components/Header/Header";
+import { listJobs } from "../../context/ListJobsContext";
+import Header from "../../components/Header/Header";
 const JobDetails = () => {
   const { jobs } = listJobs();
   const { id } = useParams();
@@ -12,7 +12,7 @@ const JobDetails = () => {
     <>
       <Header />
       <section className="flex  items-center justify-center w-full    h-[130px]  absolute max-md:top-44 top-32 ">
-        <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative  flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d] ">
+        <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative  flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d]  transition-colors duration-500 ">
           <section
             style={{ background: `${job?.logoBackground}` }}
             className="w-[160px] h-full flex items-center justify-center max-lg:absolute  top-[-20px] left-1/2  max-lg:transform max-lg:-translate-x-1/2 max-lg:h-[60px] max-lg:w-16 max-lg:rounded-lg rounded-l-lg"

@@ -2,7 +2,7 @@ import React from "react";
 
 const JobItem = ({ job }) => {
   return (
-    <section className="bg-[#ffffff]  dark:bg-[#19202d]  dark:text-white flex flex-col justify-between relative h-[230px] p-5 cursor-pointer rounded-lg">
+    <section className="bg-[#ffffff]  dark:bg-[#19202d]   transition-colors duration-500 dark:text-white flex flex-col justify-between relative h-[230px] p-5 cursor-pointer rounded-lg">
       <section
         className={`p-1 h-10 w-10 flex items-center justify-center absolute top-[-20px] rounded-xl`}
         style={{ backgroundColor: job.logoBackground }}
