@@ -92,7 +92,7 @@ const InputUser = () => {
               </section>
               <button
                 type="submit"
-                className="h-11 w-28 text-white rounded-md bg-[#5763df]"
+                className="h-11 w-28 text-white rounded-md bg-[#5763df] hover:bg-[#939bf4] transition-colors duration-500"
               >
                 Search
               </button>
@@ -139,7 +139,7 @@ const InputUser = () => {
               </section>
               <button
                 type="submit"
-                className="h-11 w-full mt-5  text-white rounded-md bg-[#5763df]"
+                className="h-11 w-full mt-5  text-white rounded-md bg-[#5763df] hover:bg-[#939bf4] transition-colors duration-500"
                 onClick={e => {
                   e.preventDefault();
                   setToggleFilter(false);

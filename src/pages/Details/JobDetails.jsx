@@ -30,7 +30,7 @@ const JobDetails = () => {
               <span className="text-[#acb0ba] "> {job?.website}</span>
             </section>
             <section>
-              <button className="w-fit bg-[#eeedfa] dark:bg-[#242b36] dark:text-white  p-3 text-[#5e63b1] font-semibold rounded-sm">
+              <button className="w-fit bg-[#eeedfa] dark:bg-[#242b36] dark:text-white  p-3  hover:bg-[#c5c9f4] transition-colors duration-500  text-[#5e63b1] font-semibold rounded-sm">
                 {" "}
                 Company Site
               </button>
@@ -52,7 +52,7 @@ const JobDetails = () => {
                 {job?.location}
               </span>
             </section>
-            <button className="w-fit max-md:w-full  bg-[#5864e0] px-5 py-2 max-md:py-5 max-md:mt-3 rounded-md text-white">
+            <button className="w-fit max-md:w-full  bg-[#5864e0] hover:bg-[#939bf4] transition-colors duration-500 px-5 py-2 max-md:py-5 max-md:mt-3 rounded-md text-white">
               Apply Now
             </button>
           </section>
@@ -97,7 +97,7 @@ const JobDetails = () => {
               </h1>
               <span>{job?.company}</span>
             </section>
-            <button className="w-fit max-md:w-full bg-[#5864e0] px-5 py-3 rounded-md text-white">
+            <button className="w-fit max-md:w-full bg-[#5864e0] px-5 py-3 rounded-md text-white hover:bg-[#939bf4] transition-colors duration-500">
               Apply Now
             </button>
           </section>

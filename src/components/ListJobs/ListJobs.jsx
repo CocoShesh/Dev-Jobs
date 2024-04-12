@@ -36,7 +36,7 @@ const ListJobs = () => {
           {filterJobs.length > 12 && (
             <button
               onClick={handleLoadMore}
-              className="w-28 h-10 bg-[#5864de] text-white rounded-md"
+              className="w-28 h-10 bg-[#5864de] text-white rounded-md hover:bg-[#939bf4] transition-colors duration-500"
             >
               {loadMore ? "Show Less" : "Load More"}
             </button>
