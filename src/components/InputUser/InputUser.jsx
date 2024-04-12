@@ -49,7 +49,7 @@ const InputUser = () => {
             <input
               type="text"
               placeholder="Filter by title, companies, expertise..."
-              className="pl-14  h-16 bg-white  dark:bg-[#19202d]  dark:text-white   max-md:border-r-transparent dark:border-r-transparent lg:w-[350px] max-md:overflow-hidden text-ellipsis  max-lg:w-full outline-none  py-3 font-semibold shadow-l-lg border-r-2 border-[#f1f1f1] dark:border-[#333c4b] rounded-l-md"
+              className="pl-14  h-16 bg-white  dark:bg-[#19202d]  dark:text-white    transition-colors duration-500  max-md:border-r-transparent dark:border-r-transparent lg:w-[350px] max-md:overflow-hidden text-ellipsis  max-lg:w-full outline-none  py-3 font-semibold shadow-l-lg border-r-2 border-[#f1f1f1] dark:border-[#333c4b] rounded-l-md"
               {...register("info")}
             />
             <img
@@ -62,7 +62,7 @@ const InputUser = () => {
             <input
               type="text"
               placeholder="Filter by location..."
-              className="pl-12 h-16 bg-white lg:w-[250px]  dark:bg-[#19202d]  dark:text-white  max-lg:w-full  outline-none  max-sm:w-full py-3 font-semibold  border-r-2 border-[#f1f1f1]  dark:border-[#333c4b] "
+              className="pl-12 h-16 bg-white lg:w-[250px]  dark:bg-[#19202d]  dark:text-white transition-colors duration-500  max-lg:w-full  outline-none  max-sm:w-full py-3 font-semibold  border-r-2 border-[#f1f1f1]  dark:border-[#333c4b] "
               {...register("location")}
             />
             <img
@@ -72,7 +72,7 @@ const InputUser = () => {
             />
           </section>
           <section className="relative">
-            <section className="pl-10  select-none pr-3 h-16  dark:bg-[#19202d]  dark:text-white flex items-center gap-3 justify-between bg-white lg:w-[350px] max-lg:w-full  py-3  shadow-r-lg rounded-r-md">
+            <section className="pl-10  select-none pr-3 h-16  dark:bg-[#19202d]  dark:text-white flex transition-colors duration-500  items-center gap-3 justify-between bg-white lg:w-[350px] max-lg:w-full  py-3  shadow-r-lg rounded-r-md">
               <section className="flex gap-3 items-center font-bold max-lg:hidden">
                 <div
                   className={`h-5 w-5  rounded-sm  relative cursor-pointer ${
