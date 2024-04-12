@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Main/Home";
 import JobDetails from "./pages/Details/JobDetails";
 import NotFound from "./pages/NotFound/NotFound";
+
 function App() {
   return (
     <>
@@ -20,8 +21,7 @@ function App() {
               }
             />
             <Route path="/jobs/:id" element={<JobDetails />} />
-            <Route path="/NotFound" element={<NotFound />} />
-            <Route path="*" element={<Navigate replace to="/NotFound" />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { listJobs } from "../../context/ListJobsContext";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const InputUser = () => {
   const [isChecked, setIsChecked] = useState(false);
   const { jobs, setFilterJobs } = listJobs();
   const [search, setSearch] = useState({ info: "", location: "" });
   const [toggleFilter, setToggleFilter] = useState(false);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
   const handleToggleFilter = () => {
     setToggleFilter(prev => !prev);
   };
@@ -38,9 +40,18 @@ const InputUser = () => {
 
     setFilterJobs(filteredData);
   }, [jobs, search, isChecked, setFilterJobs]);
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
-      <section className="h-[100px] bg-transparent flex items-center lg:w-[80%]  max-lg:relative justify-center pt-20 max-lg:w-full  ">
+      <section
+        data-aos="zoom-in-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-out"
+        className="h-[100px] bg-transparent flex items-center lg:w-[80%]  max-lg:relative justify-center pt-20 max-lg:w-full  "
+      >
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex max-lg:w-full max-lg:items-center max-lg:justify-center   "

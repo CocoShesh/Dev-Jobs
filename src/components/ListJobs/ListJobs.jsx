@@ -3,7 +3,8 @@ import { listJobs } from "../../context/ListJobsContext";
 import JobItem from "../JobItem.jsx/JobItem";
 import NoResults from "../NoResults/NoResults";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const ListJobs = () => {
   const { filterJobs, isLoading } = listJobs();
   const [loadMore, setLoadMore] = useState(false);
@@ -11,6 +12,10 @@ const ListJobs = () => {
   const handleLoadMore = () => {
     setLoadMore(prev => !prev);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -24,7 +29,12 @@ const ListJobs = () => {
       {!isLoading && filterJobs.length === 0 && <NoResults />}
       {!isLoading && filterJobs.length > 0 && (
         <main className="h-full w-full flex flex-col items-center justify-center pb-20 mt-24 max-md:mt-20">
-          <section className="lg:w-[85%] grid lg:grid-cols-3 gap-x-8 gap-y-14 sm:grid-cols-2  pb-10 h-fit max-lg:w-[95%] ">
+          <section
+            data-aos="zoom-in-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-out"
+            className="lg:w-[85%] grid lg:grid-cols-3 gap-x-8 gap-y-14 sm:grid-cols-2  pb-10 h-fit max-lg:w-[95%] "
+          >
             {filterJobs.slice(0, loadMore ? 15 : 12).map(job => {
               return (
                 <Link to={`/jobs/${job.id}`} key={job.id}>

@@ -1,17 +1,34 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { listJobs } from "../../context/ListJobsContext";
 import Header from "../../components/Header/Header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const JobDetails = () => {
+  const navigate = useNavigate();
   const { jobs } = listJobs();
   const { id } = useParams();
 
-  const job = jobs.find(job => job?.id.toString() === id);
+  const job = jobs?.find(job => job?.id.toString() === id);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  if (!job) {
+    navigate("/NotFound");
+    return null;
+  }
 
   return (
     <>
       <Header />
-      <section className="flex  items-center justify-center w-full    h-[130px]  absolute max-md:top-44 top-32 ">
+      <section
+        data-aos="zoom-in-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-out"
+        className="flex  items-center justify-center w-full    h-[130px]  absolute max-md:top-44 top-32 "
+      >
         <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative  flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d]  transition-colors duration-500 ">
           <section
             style={{ background: `${job?.logoBackground}` }}
@@ -30,7 +47,7 @@ const JobDetails = () => {
               <span className="text-[#acb0ba] "> {job?.website}</span>
             </section>
             <section>
-              <button className="w-fit bg-[#eeedfa] dark:bg-[#242b36] dark:text-white  p-3  hover:bg-[#c5c9f4] transition-colors duration-500  text-[#5e63b1] font-semibold rounded-sm">
+              <button className="w-fit bg-[#eeedfa] dark:bg-[#242b36] dark:text-white  p-3  hover:bg-[#c5c9f4] transition-colors duration-500g  text-[#5e63b1] font-semibold rounded-sm">
                 {" "}
                 Company Site
               </button>
@@ -38,12 +55,17 @@ const JobDetails = () => {
           </section>
         </section>
       </section>
-      <section className="min-h-screen   w-full  flex flex-col items-center  justify-between pt-32 max-md:pt-[13rem]  max-lg:px-3 ">
+      <section
+        data-aos="zoom-out"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-out"
+        className="min-h-screen   w-full  flex flex-col items-center  justify-between pt-32 max-md:pt-[13rem]  max-lg:px-3 "
+      >
         <section className="h-fit bg-white dark:bg-[#19202d] dark:text-white lg:w-[60%] max-lg:w-full  rounded-lg p-8 ">
           <section className="text-[#939ba4] flex items-center gap-2">
-            <span> {job.postedAt} </span>
+            <span> {job?.postedAt} </span>
             <span className="text-2xl"> • </span>
-            <span c>{job.contract}</span>
+            <span c>{job?.contract}</span>
           </section>
           <section className="flex justify-between  max-md:flex-col  max-md:items-start items-center mt-2 ">
             <section>
@@ -65,7 +87,7 @@ const JobDetails = () => {
               {job?.requirements?.content}
             </p>
             <ul className="  list-disc mt-5 px-5">
-              {job?.requirements?.items.map((item, index) => {
+              {job?.requirements?.items?.map((item, index) => {
                 return (
                   <li key={index} className="mb-2 text-[#708098]  text-lg pl-5">
                     {item}
@@ -79,7 +101,7 @@ const JobDetails = () => {
             <p className="text-[#708098] leading-7">{job?.role?.content}</p>
 
             <ul className="  list-decimal mt-5 px-5 ">
-              {job?.role?.items.map((item, index) => {
+              {job?.role?.items?.map((item, index) => {
                 return (
                   <li key={index} className="mb-2 text-[#708098]  text-lg pl-5">
                     {item}
@@ -102,7 +124,7 @@ const JobDetails = () => {
             </button>
           </section>
         </section>
-      </section>
+      </section>{" "}
     </>
   );
 };
