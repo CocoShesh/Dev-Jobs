@@ -16,7 +16,7 @@ const ListJobs = () => {
     <>
       {isLoading && (
         <section className="w-full flex items-center justify-center ">
-          <section className="bg-[#ffffff]  flex items-center justify-center   mt-20 max-lg:w-[95%]   lg:w-[72%] dark:bg-[#19202d]  dark:text-white   h-[150px] p-5 cursor-pointer rounded-lg">
+          <section className="bg-[#ffffff]  flex items-center justify-center   mt-10 max-lg:w-[95%]   lg:w-[72%] dark:bg-[#19202d]  dark:text-white   h-[150px] p-5 cursor-pointer rounded-lg">
             <div className="custom-loader"></div>
           </section>
         </section>
@@ -33,12 +33,14 @@ const ListJobs = () => {
               );
             })}
           </section>
-          <button
-            onClick={handleLoadMore}
-            className="w-28 h-10 bg-[#5864de] text-white rounded-md"
-          >
-            {loadMore ? "Show Less" : "Load More"}
-          </button>
+          {filterJobs.length > 12 && (
+            <button
+              onClick={handleLoadMore}
+              className="w-28 h-10 bg-[#5864de] text-white rounded-md"
+            >
+              {loadMore ? "Show Less" : "Load More"}
+            </button>
+          )}
         </main>
       )}
     </>
