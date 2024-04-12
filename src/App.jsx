@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ListJobs from "./components/ListJobs/ListJobs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Main/Home";
-import Header from "./components/Header/Header";
+import JobDetails from "./pages/JobDetails";
 
 function App() {
   return (
@@ -14,20 +14,12 @@ function App() {
               path="/"
               element={
                 <>
-                  <Home /> <ListJobs />
+                  <Home />
+                  <ListJobs />
                 </>
               }
             />
-          </Routes>
-          <Routes>
-            <Route
-              path="/jobs/:id"
-              element={
-                <>
-                  <Header />
-                </>
-              }
-            />
+            <Route path="/jobs/:id" element={<JobDetails />} />
           </Routes>
         </main>
       </BrowserRouter>
