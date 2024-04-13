@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { listJobs } from "../../context/ListJobsContext";
 import Header from "../../components/Header/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const JobDetails = () => {
-  const navigate = useNavigate();
   const { jobs } = listJobs();
   const { id } = useParams();
 
@@ -14,11 +13,6 @@ const JobDetails = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
-  // if (!job) {
-  //   navigate("/NotFound");
-  //   return null;
-  // }
 
   return (
     <>

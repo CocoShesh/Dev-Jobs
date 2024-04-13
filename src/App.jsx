@@ -1,6 +1,6 @@
 import React from "react";
 import ListJobs from "./components/ListJobs/ListJobs";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Main/Home";
 import JobDetails from "./pages/Details/JobDetails";
 import NotFound from "./pages/NotFound/NotFound";
@@ -21,7 +21,7 @@ function App() {
               }
             />
             <Route path=":id" element={<JobDetails />} />
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>
