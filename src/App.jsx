@@ -20,7 +20,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/jobs/:id" element={<JobDetails />} />
+            <Route path=":id" element={<JobDetails />} />
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </main>

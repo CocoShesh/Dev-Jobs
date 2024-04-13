@@ -37,7 +37,7 @@ const ListJobs = () => {
           >
             {filterJobs?.slice(0, loadMore ? 15 : 12).map(job => {
               return (
-                <Link to={`/jobs/${job?.id}`} key={job?.id}>
+                <Link to={`${job?.id}`} key={job?.id}>
                   <JobItem job={job} />
                 </Link>
               );
