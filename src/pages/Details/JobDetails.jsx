@@ -15,10 +15,10 @@ const JobDetails = () => {
     AOS.init();
   }, []);
 
-  if (!job) {
-    navigate("/NotFound");
-    return null;
-  }
+  // if (!job) {
+  //   navigate("/NotFound");
+  //   return null;
+  // }
 
   return (
     <>

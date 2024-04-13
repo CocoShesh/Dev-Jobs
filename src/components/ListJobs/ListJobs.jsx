@@ -26,8 +26,8 @@ const ListJobs = () => {
           </section>
         </section>
       )}
-      {!isLoading && filterJobs.length === 0 && <NoResults />}
-      {!isLoading && filterJobs.length > 0 && (
+      {!isLoading && filterJobs?.length === 0 && <NoResults />}
+      {!isLoading && filterJobs?.length > 0 && (
         <main className="h-full w-full flex flex-col items-center justify-center z-10 pb-20 mt-24 max-md:mt-20">
           <section
             data-aos="zoom-in-left"
@@ -35,15 +35,15 @@ const ListJobs = () => {
             data-aos-easing="ease-in-out"
             className="lg:w-[85%] grid lg:grid-cols-3 gap-x-8 gap-y-14 sm:grid-cols-2  pb-10 h-fit max-lg:w-[95%] "
           >
-            {filterJobs.slice(0, loadMore ? 15 : 12).map(job => {
+            {filterJobs?.slice(0, loadMore ? 15 : 12).map(job => {
               return (
-                <Link to={`/jobs/${job.id}`} key={job.id}>
+                <Link to={`/jobs/${job?.id}`} key={job?.id}>
                   <JobItem job={job} />
                 </Link>
               );
             })}
           </section>
-          {filterJobs.length > 12 && (
+          {filterJobs?.length > 12 && (
             <button
               onClick={handleLoadMore}
               className="w-28 h-10 bg-[#5864de] text-white rounded-md hover:bg-[#939bf4] transition-colors duration-500"

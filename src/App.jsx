@@ -21,7 +21,7 @@ function App() {
               }
             />
             <Route path="/jobs/:id" element={<JobDetails />} />
-            <Route path="*" element={<NotFound />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </main>
       </BrowserRouter>
