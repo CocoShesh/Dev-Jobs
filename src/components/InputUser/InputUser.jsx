@@ -50,7 +50,7 @@ const InputUser = () => {
         data-aos="zoom-in-left"
         data-aos-offset="300"
         data-aos-easing="ease-in-out"
-        className="h-[100px] bg-transparent flex items-center lg:w-[80%]  max-lg:relative justify-center pt-20 max-lg:w-full  "
+        className="h-[100px] bg-transparent flex items-center lg:w-[80%]  max-lg:relative max-lg:z-30 justify-center pt-20 max-lg:w-full  "
       >
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -60,7 +60,7 @@ const InputUser = () => {
             <input
               type="text"
               placeholder="Filter by title, companies, expertise..."
-              className="pl-14  h-16 bg-white  dark:bg-[#19202d]  dark:text-white    transition-colors duration-500  max-md:border-r-transparent dark:border-r-transparent lg:w-[350px] max-md:overflow-hidden text-ellipsis  max-lg:w-full outline-none  py-3 font-semibold shadow-l-lg border-r-2 border-[#f1f1f1] dark:border-[#333c4b] rounded-l-md"
+              className="pl-14  h-16 bg-white  dark:bg-[#19202d]  dark:text-white    transition-colors duration-500  max-lg:border-r-transparent dark:border-r-transparent lg:w-[350px] max-md:overflow-hidden text-ellipsis  max-lg:w-full outline-none  py-3 font-semibold shadow-l-lg border-r-2 border-[#f1f1f1] dark:border-[#333c4b] rounded-l-md"
               {...register("info")}
             />
             <img
@@ -117,7 +117,7 @@ const InputUser = () => {
             />
           </section>
           {toggleFilter && (
-            <section className="h-fit pb-5 w-full  px-5  top-[120px] shadow-lg border-t border-zinc-500 z-50  bg-white  dark:bg-[#19202d] absolute  transition-colors duration-500">
+            <section className="h-fit pb-5 w-full  px-5  top-[120px] shadow-lg border-t border-zinc-500 z-10 bg-white  dark:bg-[#19202d] absolute  transition-colors duration-500">
               <section className="relative ">
                 <input
                   type="text"
