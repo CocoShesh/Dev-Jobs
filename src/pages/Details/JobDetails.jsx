@@ -21,12 +21,12 @@ const JobDetails = () => {
         data-aos="zoom-in-left"
         data-aos-offset="300"
         data-aos-easing="ease-in-out"
-        className="flex  items-center justify-center w-full    h-[130px]  absolute max-md:top-44 top-32 "
+        className="flex  items-center justify-center w-full    h-[130px]  absolute z-20 max-md:top-44 top-32 "
       >
-        <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative  flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d]  transition-colors duration-500 ">
+        <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative   flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d]  transition-colors duration-500 ">
           <section
             style={{ background: `${job?.logoBackground}` }}
-            className="w-[160px] h-full flex items-center justify-center max-lg:absolute  top-[-20px] left-1/2  max-lg:transform max-lg:-translate-x-1/2 max-lg:h-[60px] max-lg:w-16 max-lg:rounded-lg rounded-l-lg"
+            className="w-[160px] h-full flex items-center justify-center max-lg:absolute  top-[-20px] left-1/2  max-lg:transform max-lg:-translate-x-1/2 max-lg:h-[60px] max-lg:w-16 z-10 max-lg:rounded-lg rounded-l-lg"
           >
             <div className="flex items-center justify-center w-full">
               <img src={job?.logo} alt="" className="w-full px-5 max-lg:px-1" />
@@ -41,9 +41,8 @@ const JobDetails = () => {
               <span className="text-[#acb0ba] "> {job?.website}</span>
             </section>
             <section>
-              <button className="w-fit bg-[#eeedfa] dark:bg-[#242b36] dark:text-white  p-3  hover:bg-[#c5c9f4] transition-colors duration-500g  text-[#5e63b1] font-semibold rounded-sm">
-                {" "}
-                Company Site
+              <button className="w-fit bg-[#eeedfa]  dark:bg-[#242b36] dark:text-white  p-3  hover:bg-[#c5c9f4]  cursor-pointer  text-[#5e63b1] font-semibold rounded-sm transition-colors duration-500 ">
+                Company site
               </button>
             </section>
           </section>
@@ -59,7 +58,7 @@ const JobDetails = () => {
           <section className="text-[#939ba4] flex items-center gap-2">
             <span> {job?.postedAt} </span>
             <span className="text-2xl"> • </span>
-            <span c>{job?.contract}</span>
+            <span>{job?.contract}</span>
           </section>
           <section className="flex justify-between  max-md:flex-col  max-md:items-start items-center mt-2 ">
             <section>
