@@ -33,7 +33,7 @@ const ListJobs = () => {
             data-aos="zoom-in-left"
             data-aos-offset="300"
             data-aos-easing="ease-in-out"
-            className="lg:w-[85%] grid lg:grid-cols-3 gap-x-8 gap-y-14 sm:grid-cols-2  pb-10 h-fit max-lg:w-[95%] "
+            className="lg:w-[85%] grid lg:grid-cols-3 gap-x-8 gap-y-14 sm:grid-cols-2  2xl:w-[1780px] pb-10 h-fit max-lg:w-[95%] "
           >
             {filterJobs?.slice(0, loadMore ? 15 : 12).map(job => {
               return (
