@@ -23,7 +23,7 @@ const JobDetails = () => {
         data-aos-easing="ease-in-out"
         className="flex  items-center justify-center w-full    h-[130px]  absolute z-20 max-md:top-44 top-32 "
       >
-        <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative   flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d]  transition-colors duration-500 ">
+        <section className="w-[60%] max-lg:w-full max-lg:mx-3  max-lg:relative    flex  max-md:h-fit  h-full  max-md:pb-10 bg-white rounded-lg dark:bg-[#19202d]  transition-colors duration-500 ">
           <section
             style={{ background: `${job?.logoBackground}` }}
             className="w-[160px] h-full flex items-center justify-center max-lg:absolute  top-[-20px] left-1/2  max-lg:transform max-lg:-translate-x-1/2 max-lg:h-[60px] max-lg:w-16 z-10 max-lg:rounded-lg rounded-l-lg"

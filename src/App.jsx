@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <main className="dark:bg-[#121721] bg-[#f5f6f8]  min-h-screen">
+        <main className="dark:bg-[#121721] bg-[#f5f6f8]  min-h-screen  overflow-hidden">
           <Routes>
             <Route
               path="/"
