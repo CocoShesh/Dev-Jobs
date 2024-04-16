@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { listJobs } from "../../context/ListJobsContext";
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+  const { toggleTheme, setToggleTheme } = listJobs();
   const handleToggleTheme = () => {
-    setToggle(document.documentElement.classList.toggle("dark"));
+    setToggleTheme(document.documentElement.classList.toggle("dark"));
   };
   return (
     <header className="bg-dektop-header w-full bg-cover  h-[170px]  2xl:h-[220px] flex flex-col items-center justify-center bg-no-repeat max-md:bg-mobile-header">
@@ -19,7 +20,7 @@ const Header = () => {
           >
             <div
               className={`w-4 h-4 absolute top-1 bg-[#5863d6] rounded-full transition-transform duration-300 ease-in-out ${
-                toggle ? "translate-x-7" : "translate-x-1"
+                toggleTheme ? "translate-x-7" : "translate-x-1"
               }`}
             ></div>
           </section>

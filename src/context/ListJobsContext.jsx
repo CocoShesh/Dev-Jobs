@@ -10,6 +10,8 @@ export const ListJobsProvider = ({ children }) => {
   const [jobs, setJobs] = useState([]);
   const [filterJobs, setFilterJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [toggleTheme, setToggleTheme] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -27,7 +29,14 @@ export const ListJobsProvider = ({ children }) => {
 
   return (
     <ListJobsContext.Provider
-      value={{ jobs, filterJobs, setFilterJobs, isLoading }}
+      value={{
+        jobs,
+        filterJobs,
+        setFilterJobs,
+        isLoading,
+        toggleTheme,
+        setToggleTheme,
+      }}
     >
       {children}
     </ListJobsContext.Provider>
